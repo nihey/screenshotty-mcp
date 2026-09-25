@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.nihey/screenshotty",
+  "description": "Capture web pages as screenshots (returned inline) or PDFs via the Screenshotty API.",
+  "repository": {
+    "url": "https://github.com/nihey/screenshotty-mcp",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "screenshotty-mcp",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SCREENSHOTTY_API_KEY",
+          "description": "Screenshotty API key from https://screenshotty.link/dashboard/api-keys",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

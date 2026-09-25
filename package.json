@@ -1,0 +1,51 @@
+{
+  "name": "screenshotty-mcp",
+  "version": "1.0.1",
+  "description": "MCP server for the Screenshotty API: screenshots (returned inline) and PDFs of any web page",
+  "main": "dist/index.js",
+  "bin": {
+    "screenshotty-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "screenshotty",
+    "screenshot",
+    "ai",
+    "claude"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Kassel Labs",
+  "license": "MIT",
+  "mcpName": "io.github.nihey/screenshotty",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://screenshotty.link?utm_source=mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nihey/screenshotty-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nihey/screenshotty-mcp/issues"
+  }
+}

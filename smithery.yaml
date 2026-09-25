@@ -1,0 +1,15 @@
+# Smithery configuration: https://smithery.ai/docs/config#smitheryyaml
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - screenshottyApiKey
+    properties:
+      screenshottyApiKey:
+        type: string
+        description: Screenshotty API key (free at https://screenshotty.link/sign-up, 250 screenshots/month)
+  commandFunction: |-
+    (config) => ({ command: 'node', args: ['dist/index.js'], env: { SCREENSHOTTY_API_KEY: config.screenshottyApiKey } })
+  exampleConfig:
+    screenshottyApiKey: your_api_key
