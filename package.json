@@ -1,6 +1,6 @@
 {
   "name": "screenshotty-mcp",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "MCP server for the Screenshotty API: screenshots (returned inline) and PDFs of any web page",
   "main": "dist/index.js",
   "bin": {

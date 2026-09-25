@@ -2,8 +2,8 @@
 
 [Model Context Protocol](https://modelcontextprotocol.io/) server for the
 [Screenshotty](https://screenshotty.link?utm_source=mcp) screenshot API. Lets Claude, Cursor,
-Cline, and any other MCP client capture web pages as images or PDFs — and **see** the
-screenshot, since images come back inline.
+Cline, and any other MCP client capture web pages — or render HTML — as images or PDFs,
+and **see** the result, since images come back inline.
 
 ## Get an API key
 
@@ -42,10 +42,12 @@ Claude Desktop config lives at `~/Library/Application Support/Claude/claude_desk
 | Tool | What it does |
 |------|--------------|
 | `screenshot_url` | Screenshot a page (PNG, JPEG, WebP). Returns the hosted URL, plus the image inline when it is 2 MB or smaller. Options: viewport, full page, CSS selector, wait, ad blocking, cookie-banner blocking, light/dark mode, device scale factor. |
-| `generate_pdf` | Render a page to PDF. Returns the hosted PDF URL. |
+| `screenshot_html` | Render an HTML document (inline CSS/JS; public http(s) assets only) to PNG, JPEG, or WebP — social cards, charts, email previews. Returns the URL plus the image inline. |
+| `generate_pdf` | Render a page (`url`) or an HTML document (`html`) to PDF. Returns the hosted PDF URL. |
 
 Example prompts: *"Screenshot https://example.com on a 390px-wide viewport and tell me
-what's broken on mobile"*, *"Save our pricing page as a PDF"*.
+what's broken on mobile"*, *"Save our pricing page as a PDF"*, *"Design a 1200×630 Open
+Graph card for this blog post and render it"*.
 
 ## Environment variables
 
